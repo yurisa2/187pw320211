@@ -15,6 +15,8 @@ class Fontes extends BaseController
 		foreach ($data["tabela"] as $key => $value) {
 			$data["tabela"][$key]["btnEditar"] = "<a href='updateInit/".
 																						$data["tabela"][$key]["id"]."'>Editar Registro</a>";
+			$data["tabela"][$key]["btnDelete"] = "<a href='delete/".
+																						$data["tabela"][$key]["id"]."'>Deletar Registro</a>";
 		}
 
 		// echo '<pre>';var_dump($data); exit; // DEBUG
@@ -70,6 +72,16 @@ class Fontes extends BaseController
 
 		var_dump($retorno);
 
+	}
+
+	public function delete($fontesId) {
+		// https://codeigniter4.github.io/userguide/models/model.html#deleting-data
+
+		$model = new \App\Models\ModelFontes();
+
+		$retorno = $model->delete($fontesId);
+
+		var_dump($retorno);
 	}
 
 }
