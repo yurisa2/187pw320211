@@ -1,3 +1,6 @@
+<?php echo $this->extend('tema'); ?>
+<?php echo $this->section('conteudoPrincipal'); ?>
+
 <?php
 
 echo "<pre>";
@@ -28,3 +31,4 @@ $table->setHeading(
 echo $table->generate($data);
 
  ?>
+ <?php echo $this->endSection(); ?>

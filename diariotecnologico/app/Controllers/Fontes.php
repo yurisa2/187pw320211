@@ -21,7 +21,8 @@ class Fontes extends BaseController
 
 		// echo '<pre>';var_dump($data); exit; // DEBUG
 
-		echo view('fontesView', $data);
+		echo view('fontesView', $data); // Só para fazer o teste
+
 	}
 
 	public function createInit() {
@@ -70,7 +71,7 @@ class Fontes extends BaseController
 
 		$retorno = $model->update($data["id"], $data );
 
-		var_dump($retorno);
+		// var_dump($retorno);
 
 	}
 
@@ -81,7 +82,7 @@ class Fontes extends BaseController
 
 		$retorno = $model->delete($fontesId);
 
-		var_dump($retorno);
+		// var_dump($retorno);
 	}
 
 }

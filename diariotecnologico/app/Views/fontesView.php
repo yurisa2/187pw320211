@@ -1,3 +1,6 @@
+<?= $this->extend('tema'); #OPEN SHORT TAG São um atalho de echo() ?>
+<?php echo $this->section('conteudoPrincipal'); # Mesma coisa sem open short tag ?>
+
 <?php
 
 echo "<pre>";
@@ -20,3 +23,4 @@ $table->setHeading(
 echo $table->generate($data);
 
  ?>
+<?= $this->endSection(); ?>
